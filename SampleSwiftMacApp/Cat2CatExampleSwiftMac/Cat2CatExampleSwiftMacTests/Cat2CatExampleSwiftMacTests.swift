@@ -58,7 +58,7 @@ class Cat2CatExampleSwiftMacTests: XCTestCase {
         XCTAssertNotNil(NSImage.ac_No_C(), "No C image was nil!")
         XCTAssertNotNil(NSImage.ac_SidewaysC(), "Sideways C was nil!")
         XCTAssertNotNil(NSImage.ac_PD_in_circle(), "PD in circle was nil!")
-        XCTAssertNotNil(NSImage.ac_PDe_Darka_Circle(), "PD in dark circle was nil")
+        XCTAssertNotNil(NSImage.ac_PD_Dark_Circle(), "PD in dark circle was nil")
     }
     
 }

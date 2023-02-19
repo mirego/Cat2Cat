@@ -202,13 +202,13 @@ static VICatalogWalkerParameters *parametersFromArguments(int argc, const char *
     NSURL *basePathUrl = [NSURL fileURLWithPath:[basePath stringByStandardizingPath]];
     NSMutableArray *assetCatalogPaths = [NSMutableArray array];
     for (NSString *rawAssetCatalog in rawAssetCatalogs) {
-        NSURL *url = [NSURL URLWithString:[rawAssetCatalog stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
+        NSURL *url = [NSURL URLWithString:[rawAssetCatalog stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLUserAllowedCharacterSet]
                             relativeToURL:basePathUrl];
         [assetCatalogPaths addObjectsFromArray:filesMatchingPattern(url.path)];
     }
     parameters.assetCatalogPaths = assetCatalogPaths;
     
-    NSURL *outputUrl = [NSURL URLWithString:[outputDirectory stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
+    NSURL *outputUrl = [NSURL URLWithString:[outputDirectory stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLUserAllowedCharacterSet]
                               relativeToURL:basePathUrl];
     parameters.outputDirectory = outputUrl.path;
     

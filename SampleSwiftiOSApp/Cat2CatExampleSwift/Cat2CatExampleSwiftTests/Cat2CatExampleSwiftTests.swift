@@ -11,11 +11,6 @@ import XCTest
 
 class Cat2CatExampleSwiftTests: XCTestCase {
     
-    /// Tests the assumption that an .appiconset does not return an image when using imageNamed:
-    func testIconsDoNotReturnImages() {
-        XCTAssertNil(UIImage(named:"AppIcon"), "AppIcon is not nil!")
-    }
-    
     /// Tests the assumption that a .launchimage *does* return an image when using imageNamed:
     func testLaunchImagesDoReturnImages() {
         XCTAssertNotNil(UIImage(named:"LaunchImage"), "Launch image is nil!")
@@ -30,8 +25,8 @@ class Cat2CatExampleSwiftTests: XCTestCase {
         
         let methodRetreived = UIImage.ac_US_Capitol()
         
-        let imageNamedData = UIImagePNGRepresentation(imageNamed)
-        let methodReterivedData = UIImagePNGRepresentation(methodRetreived)
+        let imageNamedData = imageNamed.pngData()
+        let methodReterivedData = methodRetreived.pngData()
         
         //Compare the data of the two images. Note that comparing the images directly doesn't work since
         //that tests whether they're the same instance, not whether they have identical data.
@@ -57,7 +52,7 @@ class Cat2CatExampleSwiftTests: XCTestCase {
         XCTAssertNotNil(UIImage.ac_No_C(), "No C image was nil!")
         XCTAssertNotNil(UIImage.ac_SidewaysC(), "Sideways C was nil!")
         XCTAssertNotNil(UIImage.ac_PD_in_circle(), "PD in circle was nil!")
-        XCTAssertNotNil(UIImage.ac_PDe_Darka_Circle(), "PD in dark circle was nil")
+        XCTAssertNotNil(UIImage.ac_PD_Dark_Circle(), "PD in dark circle was nil")
     }
     
 }

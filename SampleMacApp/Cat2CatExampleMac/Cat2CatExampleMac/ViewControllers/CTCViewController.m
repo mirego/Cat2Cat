@@ -30,7 +30,7 @@
                         [NSImage ac_No_C],
                         [NSImage ac_SidewaysC],
                         [NSImage ac_PD_in_circle],
-                        [NSImage ac_PDe_Darka_Circle],
+                        [NSImage ac_PD_Dark_Circle],
                         [NSImage ac_Golden_Gate_Bridge],
                         [NSImage ac_US_Capitol],
                         [NSImage ac_Venice_Beach],

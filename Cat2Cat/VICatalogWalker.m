@@ -66,7 +66,7 @@ static NSString *const ExtensionStandardImageset = @".imageset";
         NSArray *topLevelContents = [self contentsOfFolderAtPath:fullCatalogPath];
         if (!topLevelContents) {
             NSLog(@"Couldn't get top level contents for catalog %@!", catalogName);
-            return NO;
+            return nil;
         }
         
         [topLevelFolders addObject:[self folderModelFromFolderContents:topLevelContents
@@ -82,7 +82,7 @@ static NSString *const ExtensionStandardImageset = @".imageset";
     NSError *folderError = nil;
     
     //Since we're converting to an NSURL, use percent-escape encoding or spaces will crash.
-    path = [path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    path = [path stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLUserAllowedCharacterSet];
     
     //Make sure to skip hidden files
     NSArray *folderContents = [self.fileManager contentsOfDirectoryAtURL:[NSURL URLWithString:path]

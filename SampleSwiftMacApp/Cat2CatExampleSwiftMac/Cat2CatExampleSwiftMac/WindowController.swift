@@ -19,7 +19,7 @@ class WindowController: NSWindowController {
         // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
         images = [
             NSImage.ac_No_C(),
-            NSImage.ac_PDe_Darka_Circle(),
+            NSImage.ac_PD_Dark_Circle(),
             NSImage.ac_PD_in_circle(),
             NSImage.ac_SidewaysC(),
             NSImage.ac_Golden_Gate_Bridge(),

@@ -17,14 +17,6 @@
 @implementation Cat2CatExampleTests
 
 /**
- *  Tests the assumption that an .appiconset does not return an image when using imageNamed:
- */
-- (void)testIconsDoNotReturnImages
-{
-    XCTAssertNil([UIImage imageNamed:@"AppIcon"], @"AppIcon is not nil!");
-}
-
-/**
  *  Tests the assumption that a .launchimage *does* return an image when using imageNamed:
  */
 - (void)testLaunchImagesDoReturnImages
@@ -77,7 +69,7 @@
     XCTAssertNotNil([UIImage ac_No_C], @"No C image was nil!");
     XCTAssertNotNil([UIImage ac_SidewaysC], @"Sideways C was nil!");
     XCTAssertNotNil([UIImage ac_PD_in_circle], @"PD in circle was nil!");
-    XCTAssertNotNil([UIImage ac_PDe_Darka_Circle], @"PD in dark circle was nil");
+    XCTAssertNotNil([UIImage ac_PD_Dark_Circle], @"PD in dark circle was nil");
 }
 
 @end

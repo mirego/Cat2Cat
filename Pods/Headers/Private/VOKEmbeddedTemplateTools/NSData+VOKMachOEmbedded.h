@@ -1,1 +1,0 @@
-../../../VOKEmbeddedTemplateTools/Pod/NSData+VOKMachOEmbedded.h

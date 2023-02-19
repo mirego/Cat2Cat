@@ -1,12 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "wrigley@1x.png",
+      "filename" : "icon_281@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "wrigley@2x.png",
+      "filename" : "icon_281@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
