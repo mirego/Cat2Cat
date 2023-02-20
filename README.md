@@ -1,6 +1,5 @@
-Cat2Cat (Catalog to Category)
-=========
-----
+# Cat2Cat (Catalog to Category)
+
 `Cat2Cat` exists to help solve the typo problem with UIImage's `imageNamed:` method. 
 
 Without `Cat2Cat`, you can be left wondering where your background image named `backgroundImage` is, only to discover that you've set up a `[UIImage imageNamed:@"backrgoundImage"];` call by accident. 
@@ -16,11 +15,11 @@ After running `Cat2Cat` and adding the category or categories it produces, inste
 `Cat2Cat` is compatible with Xcode 5 projects which can leverage Asset Catalogs (i.e., iOS 6 and above).
 
 ## Usage
-----
 
 *Note: You should not use Cat2Cat as a Git Submodule due to issues with how submodules handle the test filenames which include accents. If you wish to keep an eye on versions through dependency management instead of manually, please use our CocoaPod, which does not contain any of the test projects.*
 
 ### Using a Pre-Compiled Binary And A Build Script
+
 The current compiled binary can be downloaded from [the releases page](../../releases).
 
 ```
@@ -92,7 +91,7 @@ In the Arguments section, add five (or more) Arguments Passed On Launch to the b
 After you've added your launch arguments, build and run the application. Your new category or categories should be output to the file path you've provided.
 
 ## Notes
-----
+
 * Any image name containing invalid method name characters (anything other than a-z,A-Z,0-9, and an underscore) in the Asset Catalog will have those characters replaced in the method signature with underscores. For example while "AssetName" would become `ac_AssetName`, "Asset Name" will become `ac_Asset_Name`. 
 
 * Relatedly, characters in image names with accents or other decorations will generally have the letter without the accent then an underscore. For example , an image named "Fiancée Photo" in your asset catalog will be become `ac_Fiance_e_Photo`.
@@ -106,14 +105,13 @@ After you've added your launch arguments, build and run the application. Your ne
 * [XcodeAutoBasher](https://github.com/vokal/XcodeAutoBasher) can be used to automatically run a script to use Cat2Cat whenever you change anything within an asset catalog.
 
 ## Limitations
-----
+
 * `.launchimage`, `.iconset` and `.appiconset` folders are not supported on iOS, since they are not directly supported by `UIImage`'s `imageNamed:` scheme. If you need to use your app icon or launch image in your application, please add it as a standard `.imageset`. 
 
 * `.iconset` and `.appiconset` *do* return images on OS X, but they appear to be of a single size. Would love to hear more from Mac developers about whether this would be the expected behavior if you wanted to access your App Icon. Support has been added for what does get returned for now. 
 
-
 ## Contributors
-----
+
 * [Ellen Shapiro](https://github.com/designatednerd)
 * [Bryan Luby](https://github.com/bryanluby)
 * [Isaac Greenspan](https://github.com/vokal-isaac)
