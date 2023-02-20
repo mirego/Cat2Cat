@@ -15,12 +15,12 @@ After running `Cat2Cat` and adding the category or categories it produces, inste
 
 `Cat2Cat` is compatible with Xcode 5 projects which can leverage Asset Catalogs (i.e., iOS 6 and above).
 
-##Usage
+## Usage
 ----
 
 *Note: You should not use Cat2Cat as a Git Submodule due to issues with how submodules handle the test filenames which include accents. If you wish to keep an eye on versions through dependency management instead of manually, please use our CocoaPod, which does not contain any of the test projects.*
 
-###Using a Pre-Compiled Binary And A Build Script
+### Using a Pre-Compiled Binary And A Build Script
 The current compiled binary can be downloaded from [the releases page](../../releases).
 
 ```
@@ -53,7 +53,7 @@ Cat2Cat --swift --ios \
 
 Please see the [iOS Example App](SampleiOSApp)'s `Cat2Cat` aggregate build target for the appropriate run script for iOS only, and the [Mac Example App](SampleMacApp)'s `Cat2Cat` aggregate build target for the appropriate run script for Mac only. 
 
-###Directly from Xcode
+### Directly from Xcode
 
 Download the zip of this repo using the handy link at the right. Open the .xcodeproj, select the default build scheme, then select Edit Scheme...
 
@@ -91,7 +91,7 @@ In the Arguments section, add five (or more) Arguments Passed On Launch to the b
 
 After you've added your launch arguments, build and run the application. Your new category or categories should be output to the file path you've provided.
 
-##Notes
+## Notes
 ----
 * Any image name containing invalid method name characters (anything other than a-z,A-Z,0-9, and an underscore) in the Asset Catalog will have those characters replaced in the method signature with underscores. For example while "AssetName" would become `ac_AssetName`, "Asset Name" will become `ac_Asset_Name`. 
 
@@ -105,14 +105,14 @@ After you've added your launch arguments, build and run the application. Your ne
 
 * [XcodeAutoBasher](https://github.com/vokal/XcodeAutoBasher) can be used to automatically run a script to use Cat2Cat whenever you change anything within an asset catalog.
 
-##Limitations
+## Limitations
 ----
 * `.launchimage`, `.iconset` and `.appiconset` folders are not supported on iOS, since they are not directly supported by `UIImage`'s `imageNamed:` scheme. If you need to use your app icon or launch image in your application, please add it as a standard `.imageset`. 
 
 * `.iconset` and `.appiconset` *do* return images on OS X, but they appear to be of a single size. Would love to hear more from Mac developers about whether this would be the expected behavior if you wanted to access your App Icon. Support has been added for what does get returned for now. 
 
 
-##Contributors
+## Contributors
 ----
 * [Ellen Shapiro](https://github.com/designatednerd)
 * [Bryan Luby](https://github.com/bryanluby)
